@@ -2,9 +2,10 @@ from emoji import demojize
 from nltk.tokenize import TweetTokenizer, word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
+import re
 
 tokenizer = TweetTokenizer()
-stemmer = SnowBallStemmer()
+stemmer = SnowballStemmer()
 def preprocess(tweet, stemmer=None):
     stop_words = set(stopwords.words('english'))
     tweet = str(tweet).lower()
