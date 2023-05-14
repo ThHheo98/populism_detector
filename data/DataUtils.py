@@ -2,6 +2,7 @@ from emoji import demojize
 from nltk.tokenize import TweetTokenizer, word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
+import re
 
 tokenizer = TweetTokenizer()
 stemmer = SnowballStemmer()
