@@ -1,4 +1,4 @@
-from transformers import get_linear_schedule_with_warmup,AdamW,AutoModel, AutoTokenizer, AutoModelForSequenceClassification
+from transformers import get_linear_schedule_with_warmup,AdamW, AutoModelForSequenceClassification
 import torch
 import time
 import BertUtils
