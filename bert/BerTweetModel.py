@@ -13,8 +13,8 @@ class BerTweetModel:
             output_hidden_states=False,
         )
 
-        self.optimizer = AdamW(model.parameters(), lr=5e-5, eps=1e-8)
-        self.scheduler = get_linear_schedule_with_warmup(optimizer,
+        self.optimizer = AdamW(self.model.parameters(), lr=5e-5, eps=1e-8)
+        self.scheduler = get_linear_schedule_with_warmup(self.optimizer,
                                                     num_warmup_steps=0,
                                                     num_training_steps=total_steps)
 
