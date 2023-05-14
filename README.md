@@ -1,1 +1,1 @@
-# populism_detector
+# Populism detector
