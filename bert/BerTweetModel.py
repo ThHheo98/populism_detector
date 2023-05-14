@@ -18,12 +18,6 @@ class BerTweetModel:
                                                     num_warmup_steps=0,
                                                     num_training_steps=total_steps)
 
-        if model_to_load is not None:
-            try:
-                self.model.roberta.load_state_dict(torch.load(model_to_load))
-                print("LOADED MODEL")
-            except:
-                pass
 
     def train(self, train_dataloader, epochs):
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
