@@ -1,7 +1,7 @@
 from transformers import get_linear_schedule_with_warmup,AdamW, AutoModelForSequenceClassification
 import torch
 import time
-import BertUtils
+from populism_detector.bert import BertUtils
 import numpy as np
 class BerTweetModel:
 
