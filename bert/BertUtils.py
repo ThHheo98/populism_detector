@@ -42,7 +42,7 @@ def make_train_dataloader(df, column_name, batch_size=8):
     return DataLoader(dataset, sampler=RandomSampler(dataset), batch_size=batch_size)
 
 
-def make_test_dataloader(df, column_name, tokenizer, batch_size=8):
+def make_test_dataloader(df, column_name, batch_size=8):
     input_ids, attention_masks = encode_for_bert(df, tokenizer, column_name).values()
     dataset = TensorDataset(input_ids, attention_masks)
     return DataLoader(dataset, sampler=SequentialSampler(dataset), batch_size=batch_size)
