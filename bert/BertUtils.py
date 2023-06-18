@@ -35,7 +35,7 @@ def encode_for_bert(df, tokenizer, column_name):
     return inputs
 
 
-def make_train_dataloader(df, column_name, tokenizer, batch_size=8):
+def make_train_dataloader(df, column_name, batch_size=8):
     input_ids, attention_masks = encode_for_bert(df, tokenizer, column_name).values()
     labels = torch.tensor(df.label.astype(int).values)
     dataset = TensorDataset(input_ids, attention_masks, labels)
